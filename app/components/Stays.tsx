@@ -82,7 +82,7 @@ const Stays: React.FC = () => {
         <div className="col-span-4 lg:col-span-1">
           <button
             onClick={handleNavigation}
-            className="p-4 bg-sky-600 rounded-full text-white text-xl font-semibold mt-1"
+            className="w-full p-4 bg-sky-600 rounded-full text-white text-xl font-semibold mt-1"
           >
             Search
           </button>
