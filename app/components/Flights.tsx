@@ -1,8 +1,5 @@
 "use client"
-import { useState } from "react"
 import Input from "./Input"
-import Option from "./Option"
-import Button from "./Button"
 import { BiArrowToBottom, BiArrowToTop, BiSearch, BiTransfer } from "react-icons/bi"
 import { SlCalender } from "react-icons/sl"
 import { IoPersonSharp } from "react-icons/io5"
@@ -13,8 +10,6 @@ const Flights = () => {
         <div className="lg:flex lg:flex-row lg:justify-center p-6  lg:gap-3 ">
             <div className="relative">
                 <Input placeholder="Leaving from" Icon={GoLocation} />
-                {/* <GoLocation size={24} className="absolute top-6 left-3 focus:hidden " color="blue" /> */}
-
             </div>
             <div className="hidden lg:block lg:rounded-full lg:p-5 lg:border lg:border-neutral-500">
                 <BiTransfer size={30} color="blue" />

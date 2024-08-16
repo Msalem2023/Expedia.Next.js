@@ -1,20 +1,20 @@
 import Image from "next/image"
-import { useRef, useState } from "react"
+import { ChangeEvent, useRef, useState } from "react"
 import { TbPhotoPlus } from "react-icons/tb"
 
 const ImageUpload = () => {
-    const[pickedImage,setPickedImage]=useState()
-    const imageInput=useRef()
+    const[pickedImage,setPickedImage]=useState<string|null>()
+    const imageInput=useRef<HTMLInputElement>(null)
     const handlePickClick=()=>{
-        imageInput.current.click()
+        imageInput?.current?.click()
     }
-    const handleImageChange = (event) => {
+    const handleImageChange = (event: ChangeEvent<HTMLInputElement>) => {
         if (event.target.files && event.target.files[0]) {
           const file = event.target.files[0];
           const fileReader = new FileReader();
       
           fileReader.onload = () => {
-            setPickedImage(fileReader.result);
+            setPickedImage(fileReader.result as string | null);
           };
       
           fileReader.onerror = () => {

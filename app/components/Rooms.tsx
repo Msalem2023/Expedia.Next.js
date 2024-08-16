@@ -9,7 +9,7 @@ import Link from "next/link"
 
 
 interface Room {
-    Img: [],
+    Img: string[],
     type: string,
     Rating: string,
     review: number,

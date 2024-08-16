@@ -29,7 +29,7 @@ const Property = () => {
     const firstIndex = lastIndex - itemperpage
     const item = filteredData.slice(firstIndex, lastIndex)
     const numberOfPage = Math.ceil(filteredData.length / itemperpage)
-    const numbers = [...Array(numberOfPage + 1).keys()].slice(1)
+    const numbers:number[] = Array.from({ length: numberOfPage }, (_, i) => i + 1);
     function Previous() {
         if (current !== 1) {
             setCurrent(current - 1)

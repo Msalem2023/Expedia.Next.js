@@ -3,16 +3,16 @@ import { useState } from 'react';
 import { BiHeart } from 'react-icons/bi';
 import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
 interface SingleProps {
-    Image: []
+    Image: string[]
     discription?:boolean
-    City:string,
-    Name:string,
-    rate:number,
-    price:number,
-    Stay:number,
-    PricePernight:number,
-    discount:number,
-    taxes:string
+    City?:string,
+    Name?:string,
+    rate?:number,
+    price?:number,
+    Stay?:number,
+    PricePernight?:number,
+    discount?:number,
+    taxes?:string
 }
 
 const Single: React.FC<SingleProps> = ({
