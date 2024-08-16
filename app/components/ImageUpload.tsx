@@ -9,7 +9,6 @@ const ImageUpload = () => {
         imageInput.current.click()
     }
     const handleImageChange = (event) => {
-        // Ensure files are selected
         if (event.target.files && event.target.files[0]) {
           const file = event.target.files[0];
           const fileReader = new FileReader();

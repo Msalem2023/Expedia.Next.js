@@ -179,7 +179,6 @@ export const Deals=[{
     City:'Düsseldorf',
     Name:"Steigenberger",
     rate:8.8,
-    price:516,
     Stay:2,
     PricePernight:100,
     discount:20,

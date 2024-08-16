@@ -23,10 +23,17 @@ const initialState: State = {
     Rating: "",
 };
 
-interface Action {
-    type: "Breakfast" | "Pool" | "Parking" | "Policy" | "Payment" | "Price" | "Name" | "Rating" ;
-}
 
+
+type Action =
+    | { type: 'Name'; payload: string }
+    | { type: 'Price'; payload: number }
+    | { type: 'Rating'; payload: 'good' | 'very-good' | 'excellent' | 'wonderful' }
+    | { type: 'Breakfast' }
+    | { type: 'Pool' }
+    | { type: 'Parking' }
+    | { type: 'Policy' }
+    | { type: 'Payment' };
 const Reducer = (state: State, action: Action): State => {
     switch (action.type) {
         case "Breakfast":

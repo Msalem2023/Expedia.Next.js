@@ -1,28 +1,25 @@
 import { IconType } from "react-icons"
 
 interface InputProps {
-    id:string
-    type: string,
-    fullwidth: boolean,
-    value: string,
+    type?: string,
+    value?: string,
     placeholder: string
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
     Icon?: IconType,
-    onClick: () => void
+    onClick?: () => void,
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 const Input: React.FC<InputProps> = ({
     type,
-    id,
     onClick,
     value,
     placeholder,
-    onChange,
-    Icon
+    Icon,
+    onChange
 }) => {
     return (
         <>
             <div className="relative">
-                <input placeholder={placeholder} id="id" type={type} value={value} onClick={onClick} className={`pl-[calc(2.75rem-1px)] border-[2px] border-neutral-500 border-solid focus:border-none focus:ring-2 focus:ring-sky-500 p-4 w-full mt-2 rounded-full outline-none`} />
+                <input onChange={onChange} placeholder={placeholder} type={type} value={value} onClick={onClick} className={`pl-[calc(2.75rem-1px)] border-[2px] border-neutral-500 border-solid focus:border-none focus:ring-2 focus:ring-sky-500 p-4 w-full mt-2 rounded-full outline-none`} />
                 {Icon && <Icon size={24} className="absolute top-6 left-3 focus:hidden " color="blue" />}
             </div>
         </>

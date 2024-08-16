@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useAppContext } from "../FilterReducer";
 import { Context } from "../Context";
 
-const Filter = () => {
+const Filter= () => {
     const { state, dispatch } = useAppContext();
         return (
             <div>
@@ -44,7 +44,7 @@ const Filter = () => {
                                 min={100}
                                 max={1000}
                                 value={state.Price}
-                                onChange={(e) => dispatch({ type: "Price", payload: e.target.value })}
+                                onChange={(e) => dispatch({ type: "Price", payload:parseInt( e.target.value) })}
                                 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
                                 style={{
                                     background: `linear-gradient(to right, #3b82f6 ${((state.Price - 100) / (1000 - 100)) * 100}%, #e5e7eb ${((state.Price - 100) / (1000 - 100)) * 100}%)`,

@@ -2,7 +2,6 @@ import { Deals as Ads } from "./Data"
 import Slider from "./Slider"
 
 const Deals = () => {
-    const ad = Ads.map((e) => e)
     return (
         <div className=" relative h-[800px] ">
             <img className="w-full h-full rounded-xl object-cover opacity-100 "
@@ -19,7 +18,7 @@ const Deals = () => {
                 </div>
                 <div className=" h-full  bg-[rgba(1,82,66,0.8)] ">
                     <div className="flex ">
-                        <Slider Image={ad} />
+                        <Slider Image={Ads} />
                     </div>
                 </div>
             </div>
