@@ -1,5 +1,4 @@
 import { createContext, ReactNode, useContext, useReducer } from "react";
-import { DateRange } from "react-date-range";
 
 interface Options {
     adult?: number; 
