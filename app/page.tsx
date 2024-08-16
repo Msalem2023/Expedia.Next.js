@@ -18,7 +18,7 @@ export default function Home() {
           <h5 className="text-3xl font-bold p-5">Discover your new favourite stay</h5>
           <Swipper image={Discover.map((e) => (e.Img))} />
         </div>
-        <div className="w-full">
+        <div className="w-full h-full">
           <Deals />
         </div>
 

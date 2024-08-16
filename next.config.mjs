@@ -3,7 +3,7 @@ const nextConfig = {
     images:{
         remotePatterns:[{
             protocol:"http",
-            hostname:"**"
+            hostname:"trvl-media.com"
         }]
     }
 };

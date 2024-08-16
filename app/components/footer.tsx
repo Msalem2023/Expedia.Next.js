@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                     <div className="w-full md:w-1/4 mb-4 md:mb-0">
                         <h3 className="text-xl font-bold mb-4">Policies</h3>
                         <ul className="space-y-2">
-                            <li className="py-2"><a href="/general-terms-and-conditions" className="hover:text-blue-400">General terms and conditions (excluding FeWoDirekt bookings)</a></li>
+                            <li className="py-2"><a href="/general-terms-and-conditions" className="hover:text-blue-400">General terms and conditions</a></li>
                             <li className="py-2"><a href="/fewodirekt-terms" className="hover:text-blue-400">FeWoDirekt terms and conditions</a></li>
                             <li className="py-2"><a href="/privacy" className="hover:text-blue-400">Privacy</a></li>
                             <li className="py-2"><a href="/cookies" className="hover:text-blue-400">Cookies</a></li>
