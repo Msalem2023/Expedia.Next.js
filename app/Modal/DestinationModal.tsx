@@ -4,6 +4,7 @@ import Modal from "./Modal"
 import CountrySelect from "../components/Countries"
 import Heading from "../components/heading"
 import useDestination from "../Hooks/useDestination"
+import Input from "../components/Input"
 const DestinationModal = () => {
     const { state,dispatch } = Context()
     const modal = useDestination()
@@ -13,7 +14,7 @@ const DestinationModal = () => {
                 title="where is your place located"
                 subtitle="help guests find you"
             />
-            <CountrySelect value={state?.destination} onChange={(value) => dispatch({type:"destination",payload: value})} />
+            <Input placeholder="where would you like to stay?"  onChange={(e) => dispatch({type:"destination",payload: e.target.value})} />
         </div>
     )
     return (

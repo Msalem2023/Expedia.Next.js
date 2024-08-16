@@ -13,9 +13,9 @@ const Trip=()=>{
         <div>
             <div className="flex justify-center gap-3 mt-10">
                 
-                {trip.map((e)=>(
+                {trip.map((e:any)=>(
                     <ul key={e} className="border-b-[2px]">
-                        <li onClick={()=>dispatch({type:e as "Stays" | "Flights" | "Cars" | "Packages" | "ThingsToDo"})} className={`${state[e] &&"border-b-[3px] border-sky-800"} text-lg font-semibold focus:text-sky-800 cursor-pointer`}>{e}</li>
+                        <li onClick={()=>dispatch({type:e as "Stays" | "Flights" | "Cars" | "Packages" | "ThingsToDo"})} className={`${state[e as "Stays" | "Flights" | "Cars" | "Packages" | "ThingsToDo"] &&"border-b-[3px] border-sky-800"} text-lg font-semibold focus:text-sky-800 cursor-pointer`}>{e}</li>
                     </ul>
                 ))}
 

@@ -61,7 +61,7 @@ const RentModal = () => {
 
 
 
-    const Map = useMemo(() => dynamic(() => import("../components/map"), { ssr: false }), [location])
+    const Map = useMemo(() => dynamic(() => import("../components/map"), { ssr: false }), [])
 
     const setCustomValue = (id: string, value: any) => {
         setValue(id, value, {
@@ -85,7 +85,7 @@ const RentModal = () => {
     }, [step])
     const secondaryActionLabel = useMemo(() => {
         if (step === STEPS.Category) {
-            return undefined;
+            return null;
         }
         return "Back"
 

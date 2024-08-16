@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useContext, useReducer } from "react";
+import { DateRange } from "react-date-range";
 
 interface Options {
     adult?: number; 
@@ -23,10 +24,13 @@ const initialState: State = {
 
     }
 }
+type Action =
+    | { type: 'destination'; payload: string }
+    | { type: 'date'; payload: [] }
+    | { type: 'option'; payload: Options}
+    
 
-interface Action {
-    type:  "destination" | "date" | "option";
-}
+
 
 const Reducer = (state: State, action: Action): State => {
     switch (action.type) {case "option":

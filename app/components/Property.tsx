@@ -50,7 +50,7 @@ const Property = () => {
             {item.map((e) => (
                 <div key={e.id} className="grid grid-cols-4 gap-4 rounded-lg border border-neutral-500 m-5 p-3">
                     <div className="h-full">
-                        <Single Image={e.Img} />
+                        <Single image={e.Img} />
                     </div>
                     <Link href={`/property/${e.id}`} className="col-span-3">
                         <div className="grid grid-cols-3 gap-4">

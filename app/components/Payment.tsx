@@ -8,7 +8,7 @@ export interface FormData {
 }
 
 export interface PaymentProps {
-    onSubmit: (formData: FormData) => void;
+    onSubmit: (formData: FormData) => Promise<void>;
 }
 
 const Payment: React.FC<PaymentProps>=({onSubmit})=>{

@@ -2,13 +2,14 @@
 import { BiMenu } from "react-icons/bi"
 import Menu from "./Drop-down"
 import List from "./List"
+import Image from "next/image"
 const Navbar = () => {
 
     return (
         <div className="flex flex-row justify-between shadow">
             <div className=" flex flex-row gap-6 items-center p-6">
                 <div>
-                    <img src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&siteid=4406&2&6f9ec7db" alt="Home Page" />
+                    <Image src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&siteid=4406&2&6f9ec7db" alt="Home Page" />
                 </div>
                 <div className="hidden lg:block">
                     <Menu />

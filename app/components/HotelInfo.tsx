@@ -6,25 +6,23 @@ import { MdFreeBreakfast, MdOutlinePets, MdSpa } from "react-icons/md"
 interface InfoProps{
     Name:string,
     Review:number,
-    Rating:string,
+    Rating:string|undefined,
     NumberOfReviews:number,
-    describtion:string
+    describtion:string|undefined
 }
-interface HotelInfoProps{
-Info:InfoProps
-}
-const HotelInfo:React.FC<HotelInfoProps> = ({Info}) => {
+
+const HotelInfo:React.FC<InfoProps> = ({Name,Review,Rating,NumberOfReviews,describtion}) => {
     const style = "flex items-center gap-3 text-lg text-dark-900 py-2"
 
     return (
         <>
-            <h3 className="font-bold text-2xl ">{Info.Name}</h3>
-            <p>{Info.describtion}</p>
+            <h3 className="font-bold text-2xl ">{Name}</h3>
+            <p>{describtion}</p>
             <div className="flex flex-row gap-2 mt-4">
-                <p className="bg-green-500 text-center rounded-lg text-white gap-3 px-3 py-1">{Info.Review}</p>
-                <p className="font-bold text-xl py-1 ">{Info.Rating?.toUpperCase()}</p>
+                <p className="bg-green-500 text-center rounded-lg text-white gap-3 px-3 py-1">{Review}</p>
+                <p className="font-bold text-xl py-1 ">{Rating?.toUpperCase()}</p>
             </div>
-            <a href="#" className="mt-5 text-sky-600 hover:underline flex items-center gap-3" >See all {Info.NumberOfReviews} reviews <IoArrowForwardOutline size={20} /> </a>
+            <a href="#" className="mt-5 text-sky-600 hover:underline flex items-center gap-3" >See all {NumberOfReviews} reviews <IoArrowForwardOutline size={20} /> </a>
             <h3 className="text-xl font-bold my-3">Highlights</h3>
             <div className="w-3/6 p-3 rounded-lg bg-blue-600 opacity-70 my-2">
                 <p className="flex items-center gap-3 text-lg text-dark-900" ><IoDiamond size={24} /> Pool - a rare find in Berlin!</p>

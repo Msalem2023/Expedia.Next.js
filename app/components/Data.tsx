@@ -23,27 +23,27 @@ export const properties = [{
         ,type:"Room,1 king Bed",id:1
         ,review:10,Rating:"Exceptional",
         Wifi:true,capacity:2,NumberOfBeds:1,Cancellation:[{"Partially refundable":50, "Refundable":100,"Non-refundable":0}],
-        Extras:[{"Breakfast":50,"Dinner":100,"All inclusive":150}],Discout:15,originalPrice:1000,taxes:"included"},{Img:["https://images.trvl-media.com/lodging/1000000/10000/600/541/ec794c95.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://thumbnails.trvl-media.com/lodging/1000000/10000/600/541/b324f28e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://images.trvl-media.com/lodging/1000000/10000/600/541/e5f748ba.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"]
+        Extras:[{"Breakfast":50,"Dinner":100,"All inclusive":150}],Discount:15,originalPrice:1000,taxes:"included"},{Img:["https://images.trvl-media.com/lodging/1000000/10000/600/541/ec794c95.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://thumbnails.trvl-media.com/lodging/1000000/10000/600/541/b324f28e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://images.trvl-media.com/lodging/1000000/10000/600/541/e5f748ba.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"]
             ,type:"Room,1 king Bed",id:2
             ,review:10,Rating:"Exceptional",
             Wifi:true,capacity:2,NumberOfBeds:1,Cancellation:[{"Partially refundable":50, "Refundable":100,"Non-refundable":0}],
-            Extras:[{"Breakfast":50,"Dinner":100,"All inclusive":150}],Discout:15,originalPrice:1000,taxes:"included"},{Img:["https://images.trvl-media.com/lodging/1000000/10000/600/541/ec794c95.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://thumbnails.trvl-media.com/lodging/1000000/10000/600/541/b324f28e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://images.trvl-media.com/lodging/1000000/10000/600/541/e5f748ba.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"]
+            Extras:[{"Breakfast":50,"Dinner":100,"All inclusive":150}],Discount:15,originalPrice:1000,taxes:"included"},{Img:["https://images.trvl-media.com/lodging/1000000/10000/600/541/ec794c95.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://thumbnails.trvl-media.com/lodging/1000000/10000/600/541/b324f28e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://images.trvl-media.com/lodging/1000000/10000/600/541/e5f748ba.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"]
                 ,type:"Room,1 king Bed",id:3
                 ,review:10,Rating:"Exceptional",
                 Wifi:true,capacity:2,NumberOfBeds:1,Cancellation:[{"Partially refundable":50, "Refundable":100,"Non-refundable":0}],
-                Extras:[{"Breakfast":50,"Dinner":100,"All inclusive":150}],Discout:15,originalPrice:1000,taxes:"included"},{Img:["https://images.trvl-media.com/lodging/1000000/10000/600/541/ec794c95.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://thumbnails.trvl-media.com/lodging/1000000/10000/600/541/b324f28e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://images.trvl-media.com/lodging/1000000/10000/600/541/e5f748ba.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"]
+                Extras:[{"Breakfast":50,"Dinner":100,"All inclusive":150}],Discount:15,originalPrice:1000,taxes:"included"},{Img:["https://images.trvl-media.com/lodging/1000000/10000/600/541/ec794c95.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://thumbnails.trvl-media.com/lodging/1000000/10000/600/541/b324f28e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://images.trvl-media.com/lodging/1000000/10000/600/541/e5f748ba.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"]
                     ,type:"Room,1 king Bed",id:4
                     ,review:10,Rating:"Exceptional",
                     Wifi:true,capacity:2,NumberOfBeds:1,Cancellation:[{"Partially refundable":50, "Refundable":100,"Non-refundable":0}],
-                    Extras:[{"Breakfast":50,"Dinner":100,"All inclusive":150}],Discout:15,originalPrice:1000,taxes:"included"},{Img:["https://images.trvl-media.com/lodging/1000000/10000/600/541/ec794c95.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://thumbnails.trvl-media.com/lodging/1000000/10000/600/541/b324f28e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://images.trvl-media.com/lodging/1000000/10000/600/541/e5f748ba.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"]
+                    Extras:[{"Breakfast":50,"Dinner":100,"All inclusive":150}],Discount:15,originalPrice:1000,taxes:"included"},{Img:["https://images.trvl-media.com/lodging/1000000/10000/600/541/ec794c95.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://thumbnails.trvl-media.com/lodging/1000000/10000/600/541/b324f28e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://images.trvl-media.com/lodging/1000000/10000/600/541/e5f748ba.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"]
                         ,type:"Room,1 king Bed",id:5
                         ,review:10,Rating:"Exceptional",
                         Wifi:true,capacity:2,NumberOfBeds:1,Cancellation:[{"Partially refundable":50, "Refundable":100,"Non-refundable":0}],
-                        Extras:[{"Breakfast":50,"Dinner":100,"All inclusive":150}],Discout:15,originalPrice:1000,taxes:"included"},{Img:["https://images.trvl-media.com/lodging/1000000/10000/600/541/ec794c95.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://thumbnails.trvl-media.com/lodging/1000000/10000/600/541/b324f28e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://images.trvl-media.com/lodging/1000000/10000/600/541/e5f748ba.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"]
+                        Extras:[{"Breakfast":50,"Dinner":100,"All inclusive":150}],Discount:15,originalPrice:1000,taxes:"included"},{Img:["https://images.trvl-media.com/lodging/1000000/10000/600/541/ec794c95.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://thumbnails.trvl-media.com/lodging/1000000/10000/600/541/b324f28e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium","https://images.trvl-media.com/lodging/1000000/10000/600/541/e5f748ba.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"]
                             ,type:"Room,1 king Bed",id:6
                             ,review:10,Rating:"Exceptional",
                             Wifi:true,capacity:2,NumberOfBeds:1,Cancellation:[{"Partially refundable":50, "Refundable":100,"Non-refundable":0}],
-                            Extras:[{"Breakfast":50,"Dinner":100,"All inclusive":150}],Discout:15,originalPrice:1000,taxes:"included"}],
+                            Extras:[{"Breakfast":50,"Dinner":100,"All inclusive":150}],Discount:15,originalPrice:1000,taxes:"included"}],
     Price: 300,
     Currency: "EGP",
     Taxes: "included taxes and fees",

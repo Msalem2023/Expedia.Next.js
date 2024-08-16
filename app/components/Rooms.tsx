@@ -20,12 +20,13 @@ interface Room {
     originalPrice: number,
     Discount: number,
     Extras: Record<string, any>,
-    id:string
+    id:number,
+    taxes:string
 }
 
 interface RoomsProps {
     Rooms: Room,
-    PropertyId:string
+    PropertyId:number
 }
 
 const Rooms: React.FC<RoomsProps> = ({ Rooms,PropertyId }) => {
@@ -34,7 +35,7 @@ const Rooms: React.FC<RoomsProps> = ({ Rooms,PropertyId }) => {
         <>
             <div className="border border-neutral-500 w-full rounded-lg flex flex-col overflow-hidden" key={Rooms.type}>
                 <div className="w-full h-48 md:h-56 lg:h-64">
-                    <Single Image={Rooms.Img} className="w-full h-full object-cover" />
+                    <Single image={Rooms.Img}  />
                 </div>
                 <h3 className="p-3 text-xl font-bold mt-10">{Rooms.type}</h3>
                 <div className="p-2 flex flex-wrap gap-2 mt-4">
@@ -48,7 +49,7 @@ const Rooms: React.FC<RoomsProps> = ({ Rooms,PropertyId }) => {
                 <div className="p-4 border-t-[2px]">
                     <h3 className="text-xl font-semibold my-3">Cancellation</h3>
                     <a href="#" className="my-2 hover:underline flex items-center gap-3">More details <IoArrowForwardOutline size={20} /></a>
-                    {Rooms.Cancellation.map((item, index) => (
+                    {Rooms.Cancellation.map((item:string, index:number) => (
                         <div key={index} className="mb-4">
                             {Object.entries(item).map(([key, value]) => (
                                 <div key={key} className="flex items-center p-2 relative">
@@ -63,7 +64,7 @@ const Rooms: React.FC<RoomsProps> = ({ Rooms,PropertyId }) => {
                                     <div key={key} className="flex items-center p-2 relative">
                                         <input id={key} type="radio" name="Extras" className="w-5 h-5 text-sky-600 mr-2" />
                                         <label htmlFor={key} className="text-lg font-semibold">{key}</label>
-                                        <span className="absolute right-0 text-xl font-semibold">+ EGP {value}</span>
+                                        <span className="absolute right-0 text-xl font-semibold">+ EGP {value as number}</span>
                                     </div>
                                 ))}
                                 <p className="bg-green-500 text-center rounded-lg text-white px-3 py-1 text-lg w-full sm:w-2/6">{Rooms.Discount}% off</p>

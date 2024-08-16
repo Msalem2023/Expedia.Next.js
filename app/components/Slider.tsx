@@ -61,7 +61,7 @@ const Slider: React.FC<SingleProps> = ({ Image }) => {
                     >
                         {Image.map((e,index) => (
                             <div key={index} className='flex-shrink-0 lg:w-1/4 md:w-1/3 sm:1/2 p-2'>
-                                <Single rate={e.rate} taxes={e.taxes} Stay={e.Stay} discount={e.discount}  PricePernight={e.PricePernight} City={e.City} Name={e.Name} Image={e.Img} />
+                                <Single rate={e.rate} taxes={e.taxes} Stay={e.Stay} discount={e.discount}  PricePernight={e.PricePernight} City={e.City} Name={e.Name} image={e.Img} />
                             </div>
                         ))}
                     </div>

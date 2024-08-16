@@ -1,10 +1,11 @@
+import Image from "next/image"
 import { Deals as Ads } from "./Data"
 import Slider from "./Slider"
 
 const Deals = () => {
     return (
         <div className=" relative h-[800px] ">
-            <img className="w-full h-full rounded-xl object-cover opacity-100 "
+            <Image className="w-full h-full rounded-xl object-cover opacity-100 "
                 src="https://forever.travel-assets.com/flex/flexmanager/mediaasset/714087-0_2-BEX_GO_Alps_Therin-00539RGB.jpg?impolicy=fcrop&w=1200&h=514&p=1&q=high"
                 alt="Scenic view" />
             <div className="absolute top-20 left-0 right-0">
