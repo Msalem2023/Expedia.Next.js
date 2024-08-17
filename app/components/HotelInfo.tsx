@@ -34,8 +34,8 @@ const HotelInfo:React.FC<InfoProps> = ({Name,Review,Rating,NumberOfReviews,descr
                 <p className="flex items-center gap-3 text-lg text-dark-900" ><BiWalk size={24} /> Near Checkpoint Charlie</p>
             </div>
             <h3 id="amenities" className="text-xl font-bold my-3">Popular Amenties</h3>
-            <div className="flex flex-row justify-between mt-4 w-3/6">
-                <div>
+            <div className="flex flex-row justify-between mt-4 w-full lg:w-3/6">
+                <div >
                     <p className={`${style}`} ><BiRestaurant size={30} /> Restaurant</p>
                     <p className={`${style}`} ><MdOutlinePets size={30} /> Pet friendly</p>
                     <p className={`${style}`} ><MdFreeBreakfast size={30} /> Breakfast</p>

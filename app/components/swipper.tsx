@@ -28,7 +28,7 @@ const Swipper: React.FC<SwipperProps> = ({ image }) => {
             >
                 {image.map((e, i) => (
                     <motion.div className="lg:w-1/4 min-h-[30rem] min-w-[20rem] py-[40px] px-[20px]" key={i}>
-                        <Image className='w-full h-full rounded-[2rem] pointer-events-none object-cover' src={e} alt={`Image ${i}`} />
+                        <Image style={{objectFit:"cover"}} className='w-full h-full rounded-[2rem] pointer-events-none ' src={e} alt={`Image ${i}`} />
                     </motion.div>
                 ))}
             </motion.div>

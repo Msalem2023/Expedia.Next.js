@@ -6,11 +6,7 @@ const Footer: React.FC = () => {
             <div className="container mx-auto px-4 md:px-8">
                 <div className="flex flex-wrap justify-between mb-8">
                     <div className="w-full md:w-1/4 mb-4 md:mb-0">
-                        <Image
-                            src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"
-                            alt="Expedia Group Logo"
-                            className="h-12 mb-4"
-                        />
+                        <h3 className="text-3xl font-bold text-white">Expedia</h3>
                         <h3 className="text-xl font-bold mb-4">Company</h3>
                         <ul className="space-y-2">
                             <li className="py-2"><a href="/jobs" className="hover:text-blue-400">Jobs</a></li>

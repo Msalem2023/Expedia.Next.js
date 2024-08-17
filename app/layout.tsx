@@ -30,10 +30,11 @@ export default function RootLayout({
               <OptionModal/>
               <DestinationModal/>
               <DateModal/>
+
+              <div className="py-20">
               {children}
-              <div className="pt-2 rounded-lg">
-              <Footer/>
               </div>
+              <Footer/>
             </AppProvider>
           </FilterProvider>
         </DataProvider>

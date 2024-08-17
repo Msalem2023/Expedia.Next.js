@@ -37,7 +37,7 @@ const Single: React.FC<SingleProps> = ({
 
     const handleRight = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === Image.length - 1
+            prevIndex === image.length - 1
                 ? 0
                 : prevIndex + 1
         );
@@ -46,7 +46,7 @@ const Single: React.FC<SingleProps> = ({
     const handleLeft = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex === 0
-                ? Image.length - 1
+                ? image.length - 1
                 : prevIndex - 1
         );
     };
@@ -56,7 +56,7 @@ const Single: React.FC<SingleProps> = ({
 
             <div className='relative w-full h-[300px] max-w-screen-lg mx-auto overflow-hidden'>
                 <div className='relative flex items-center w-full h-full'>
-                    {Image?.length > 1 && (
+                    {image?.length > 1 && (
                         <MdArrowBackIosNew
                             onClick={handleLeft}
                             className='absolute left-2 top-1/2 transform -translate-y-1/2 cursor-pointer rounded-full hover:bg-slate-500 p-3 z-50'
@@ -67,14 +67,14 @@ const Single: React.FC<SingleProps> = ({
 
                     <BiHeart className='absolute top-0 right-3 text-rose-500 bg-white rounded-full p-2' size={50} />
                     <div className='w-full h-full'>
-                        <Image
+                        <Image 
                             className='w-full h-full object-cover rounded-3xl'
                             src={image[currentIndex]}
                             alt='Explore'
                         />
                     </div>
 
-                    {Image.length > 1 && (
+                    {image.length > 1 && (
                         <MdArrowForwardIos
                             onClick={handleRight}
                             className='absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer rounded-full bg-transparent hover:bg-slate-500 p-3 z-50'

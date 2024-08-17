@@ -6,10 +6,10 @@ import { FilterProvider } from "../FilterReducer"
 const Properties = () => {
     return (
             <div className="grid grid-cols-4">
-                <div className="col-span-1">
+                <div className="hidden lg:block lg:col-span-1 ">
                     <Filter />
                 </div>
-                <div className="col-span-3">
+                <div className="lg:col-span-3 col-span-4">
                     <Property />
                 </div>
             </div>

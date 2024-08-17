@@ -3,7 +3,10 @@ import { BiMenu } from "react-icons/bi"
 import Menu from "./Drop-down"
 import List from "./List"
 import Image from "next/image"
+import useListYourPopertyModal from "../Hooks/useListYourProperty"
 const Navbar = () => {
+    const rentModal=useListYourPopertyModal()
+
 
     return (
         <div className="flex flex-row justify-between shadow">
@@ -20,7 +23,7 @@ const Navbar = () => {
                     <List />
                 </div>
                 <div className="lg:hidden p-6 cursor-pointer ">
-                    <BiMenu size={30}/>
+                    <BiMenu onClick={rentModal.onOpen} size={30}/>
 
                 </div>
             </div>

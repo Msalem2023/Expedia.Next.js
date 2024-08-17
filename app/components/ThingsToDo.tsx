@@ -13,7 +13,7 @@ const ThingsToDo = () => {
                 <Input placeholder="when?" Icon={SlCalender} />
             </div>
             <div>
-                <button className="p-4 bg-sky-600 rounded-full text-white text-xl font-sembold mt-1">Search</button>
+                <button className="w-full p-4 bg-sky-600 rounded-full text-white text-xl font-sembold mt-1">Search</button>
             </div>
         </div>
     )
