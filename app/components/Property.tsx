@@ -30,7 +30,7 @@ const Property = () => {
     const firstIndex = lastIndex - itemperpage
     const item = filteredData.slice(firstIndex, lastIndex)
     const numberOfPage = Math.ceil(filteredData.length / itemperpage)
-    const numbers:number[] = Array.from({ length: numberOfPage }, (_, i) => i + 1);
+    const numbers: number[] = Array.from({ length: numberOfPage }, (_, i) => i + 1);
     function Previous() {
         if (current !== 1) {
             setCurrent(current - 1)
@@ -54,7 +54,7 @@ const Property = () => {
                         <Single image={e.Img} />
                     </div>
                     <div className="col-span-2 lg:hidden">
-                        <Image className="w-full h-60 rounded-lg" src={e.Img[0]} alt="property"/>
+                        <Image className="w-full h-60 rounded-lg" src={e.Img[0]} alt="property" />
                     </div>
                     <Link href={`/property/${e.id}`} className="col-span-2">
                         <div className="flex flex-wrap-reverse">
@@ -67,25 +67,26 @@ const Property = () => {
                                 </div>
                                 <p className="text-md font-semibold">{e.City}</p>
                                 {e.HasPool && <FaSwimmer size={24} color="gray" />}
-                                <div className="hidden lg:mt-6 ">
-                                    <p className={`${e.Policy === "Refundable" ? "text-green-500" : "text-rose-500"}`}>
-                                        {e.Policy}
-                                    </p>
-                                    <p className="text-green-500 text-md font-semibold">
-                                        {e.Payment === "pay later" ? "Reserve now, pay later" : "Pay now"}
-                                    </p>
+
+                            </div>
+                            <div className="hidden lg:block lg:w-1/2 lg:mt-6 ">
+                                <p className={`${e.Policy === "Refundable" ? "text-green-500" : "text-rose-500"}`}>
+                                    {e.Policy}
+                                </p>
+                                <p className="text-green-500 text-md font-semibold">
+                                    {e.Payment === "pay later" ? "Reserve now, pay later" : "Pay now"}
+                                </p>
+                            </div>
+                            <div className="hidden lg:block lg:w-1/2 lg:flex lg:flex-row">
+                                <div className="bg-green-700 rounded-lg w-24 h-10 text-center p-2">
+                                    {e.Review}
                                 </div>
-                                <div className="hidden lg:block lg:w-1/2">
-                                    <div className="bg-green-700 rounded-lg w-24 h-10 text-center p-2">
-                                        {e.Review}
-                                    </div>
-                                    <div>
-                                        <p className="font-semibold text-lg">Wonderful</p>
-                                        <p>{e.NumberOfReviews} reviews</p>
-                                    </div>
+                                <div>
+                                    <p className="font-semibold text-lg">Wonderful</p>
+                                    <p>{e.NumberOfReviews} reviews</p>
                                 </div>
                             </div>
-                            <div className="w-1/2 relative">
+                            <div className="w-full lg:block lg:w-1/2 relative">
                                 <div className="absolute bottom-0 right-0">
                                     <div
                                         className={`${e.AvailableRooms < 5 ? "bg-rose-500" : "bg-green-700"} rounded-lg w-30 h-10 text-center text-lg font-semibold p-2`}
