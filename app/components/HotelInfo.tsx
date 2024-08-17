@@ -24,13 +24,13 @@ const HotelInfo:React.FC<InfoProps> = ({Name,Review,Rating,NumberOfReviews,descr
             </div>
             <a href="#" className="mt-5 text-sky-600 hover:underline flex items-center gap-3" >See all {NumberOfReviews} reviews <IoArrowForwardOutline size={20} /> </a>
             <h3 className="text-xl font-bold my-3">Highlights</h3>
-            <div className="w-3/6 p-3 rounded-lg bg-blue-600 opacity-70 my-2">
+            <div className="w-full lg:w-3/6 p-3 rounded-lg bg-blue-600 opacity-70 my-2">
                 <p className="flex items-center gap-3 text-lg text-dark-900" ><IoDiamond size={24} /> Pool - a rare find in Berlin!</p>
             </div>
-            <div className="w-3/6 p-3 rounded-lg bg-blue-600 opacity-70 my-2">
+            <div className="w-full lg:w-3/6 p-3 rounded-lg bg-blue-600 opacity-70 my-2">
                 <p className="flex items-center gap-3 text-lg text-dark-900" ><BiLike size={24} /> Pool - a rare find in Berlin!</p>
             </div>
-            <div className="w-3/6 p-3 rounded-lg bg-blue-600 opacity-70 my-2">
+            <div className="w-full lg:w-3/6 p-3 rounded-lg bg-blue-600 opacity-70 my-2">
                 <p className="flex items-center gap-3 text-lg text-dark-900" ><BiWalk size={24} /> Near Checkpoint Charlie</p>
             </div>
             <h3 id="amenities" className="text-xl font-bold my-3">Popular Amenties</h3>

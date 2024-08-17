@@ -6,6 +6,7 @@ import { FaSwimmer, FaSwimmingPool } from "react-icons/fa"
 import { useAppContext } from "../FilterReducer"
 import Link from "next/link"
 import { properties } from "./Data"
+import Image from "next/image"
 
 
 
@@ -49,12 +50,15 @@ const Property = () => {
         <>
             {item.map((e) => (
                 <div key={e.id} className="grid grid-cols-4 gap-4 rounded-lg border border-neutral-500 m-5 p-3">
-                    <div className="h-full">
+                    <div className="hidden lg:block lg:h-full">
                         <Single image={e.Img} />
                     </div>
-                    <Link href={`/property/${e.id}`} className="col-span-3">
+                    <div className="col-span-2 lg:hidden">
+                        <Image width={50} height={50} fill src={e.Img[0]} alt="property"/>
+                    </div>
+                    <Link href={`/property/${e.id}`} className="col-span-2">
                         <div className="grid grid-cols-3 gap-4">
-                            <div className="col-span-2">
+                            <div className="col-span-3 lg:col-span-2">
                                 <h3 className="text-2xl text-neutral-700 font-semibold">{e.Name}</h3>
                                 <div className="flex flex-row gap-2">
                                     {Array.from({ length: e.Stars }, (_, index) => (
@@ -63,7 +67,7 @@ const Property = () => {
                                 </div>
                                 <p className="text-md font-semibold">{e.City}</p>
                                 {e.HasPool && <FaSwimmer size={24} color="gray" />}
-                                <div className="mt-6">
+                                <div className="hidden lg:mt-6 ">
                                     <p className={`${e.Policy === "Refundable" ? "text-green-500" : "text-rose-500"}`}>
                                         {e.Policy}
                                     </p>
@@ -71,7 +75,7 @@ const Property = () => {
                                         {e.Payment === "pay later" ? "Reserve now, pay later" : "Pay now"}
                                     </p>
                                 </div>
-                                <div className="flex flex-row gap-3 mt-2">
+                                <div className="hidden lg:flex lg:flex-row lg:gap-3 lg:mt-2">
                                     <div className="bg-green-700 rounded-lg w-24 h-10 text-center p-2">
                                         {e.Review}
                                     </div>
@@ -81,7 +85,7 @@ const Property = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-span-1 relative">
+                            <div className="col-span-3 lg:col-span-1 relative">
                                 <div className="absolute bottom-0 right-0">
                                     <div
                                         className={`${e.AvailableRooms < 5 ? "bg-rose-500" : "bg-green-700"} rounded-lg w-30 h-10 text-center text-lg font-semibold p-2`}

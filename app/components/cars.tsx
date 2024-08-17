@@ -22,7 +22,7 @@ const Cars = () => {
             <div className="relative">
                 <Input Icon={SlCalender} placeholder="Drop-off time" />
             </div>
-            <button className="w-full p-4 bg-sky-600 rounded-full text-white text-xl font-sembold mt-1">Search</button>
+            <button className="w-full lg:w-2/6 p-4 bg-sky-600 rounded-full text-white text-xl font-sembold mt-1">Search</button>
         </div>
 
     )
