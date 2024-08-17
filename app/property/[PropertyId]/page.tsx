@@ -63,7 +63,7 @@ const Selected: React.FC<{ params: Params }> = ({ params }) => {
                 <Image className="w-full h-40 rounded-lg p-1" src={data[0].Img[3]} alt={data[0].Name} />
                 <Image className="w-full h-40 rounded-lg p-1" src={data[0].Img[4]} alt={data[0].Name} />
             </div>
-            <div className="hidden lg:block  lg:col-span-2 lg:border-b-[2px] lg:sticky lg:top-0 lg:shadow lg:bg-white lg:z-50 lg:p-2 lg:rounded">
+            <div className="hidden lg:block  lg:col-span-2 lg:border-b-[2px]">
                 <div className="flex flex-row justify-between">
                     <a href="#overview" className="cursor-pointer font-semibold text-xl focus:text-sky-600 focus:border-b-[3px] focus:border-b-sky-600 " >Overview</a>
                     <a href="#amenities" className="cursor-pointer font-semibold text-xl focus:text-sky-600 focus:border-b-[3px] focus:border-b-sky-600">Amenities</a>
