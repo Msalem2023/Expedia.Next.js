@@ -4,7 +4,7 @@ import Slider from "./Slider"
 
 const Deals = () => {
     return (
-        <div className=" relative sm:h-[750px] lg:h-[800px]">
+        <div className=" relative sm:h-[820px] lg:h-[800px]">
             <Image className="w-full h-full rounded-xl object-cover opacity-100 "
                 src="https://forever.travel-assets.com/flex/flexmanager/mediaasset/714087-0_2-BEX_GO_Alps_Therin-00539RGB.jpg?impolicy=fcrop&w=1200&h=514&p=1&q=high"
                 alt="Scenic view" />
@@ -17,8 +17,8 @@ const Deals = () => {
                         <button className="bg-white text-sky-600 text-xl font-semibold p-4 rounded-full hidden lg:block" >See all deals</button>
                     </div>
                 </div>
-                <div className=" h-full  bg-[rgba(1,82,66,0.8)] ">
-                    <div className="flex ">
+                <div className=" h-full w-full bg-[rgba(1,82,66,0.8)] ">
+                    <div className="flex">
                         <Slider Image={Ads} />
                     </div>
                 </div>

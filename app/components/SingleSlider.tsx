@@ -54,7 +54,7 @@ const Single: React.FC<SingleProps> = ({
     return (
         <div>
 
-            <div className='relative lg:w-full sm:w-3/6 h-[300px] max-w-screen-lg mx-auto overflow-hidden'>
+            <div className='relative w-full h-[300px] max-w-screen-lg mx-auto overflow-hidden'>
                 <div className='relative flex items-center w-full h-full'>
                     {image?.length > 1 && (
                         <MdArrowBackIosNew
