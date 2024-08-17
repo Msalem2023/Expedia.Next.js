@@ -51,7 +51,6 @@ const Property = () => {
             <div className="container mx-auto px-4">
                 {items.map(e => (
                     <div key={e.id} className="mb-10 p-6 border border-neutral-300 rounded-lg shadow-lg flex flex-col lg:flex-row lg:items-start bg-white">
-                        {/* Image Section */}
                         <div className="w-full lg:w-1/3 lg:pr-4">
                             <div className="relative">
                                 <div className="hidden lg:block">
@@ -63,7 +62,6 @@ const Property = () => {
                             </div>
                         </div>
 
-                        {/* Content Section */}
                         <Link href={`/property/${e.id}`} className="w-full lg:w-2/3 flex flex-col">
                             <div className="flex flex-col lg:flex-row lg:justify-between lg:mb-6">
                                 <div className="w-full lg:w-2/3">
@@ -122,7 +120,7 @@ const Property = () => {
             <div className="fixed bottom-0 left-0 w-full bg-white border-t border-neutral-300 p-3 lg:hidden">
                 {items.length > 0 && (
                     <>
-                        <div className={`bg-${items[0].AvailableRooms < 5 ? "rose-500" : "green-700"} rounded-lg w-full h-10 text-center text-lg font-semibold p-2`}>
+                        <div className={`${items[0].AvailableRooms < 5 ? "bg-rose-500" : "bg-green-700"} rounded-lg w-full h-10 text-center text-lg font-semibold p-2`}>
                             We have {items[0].AvailableRooms} left
                         </div>
                         <h3 className="font-bold text-xl text-center mt-2">EGP {items[0].Price}</h3>
