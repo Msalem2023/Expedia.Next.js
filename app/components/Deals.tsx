@@ -18,7 +18,7 @@ const Deals = () => {
                     </div>
                 </div>
                 {/* <div className="  "> */}
-                    <div className="flex h-full bg-[rgba(1,82,66,0.8)]">
+                    <div className="flex h-full bg-[rgba(1,82,66,0.8)] rounded-b-lg">
                         <Slider Image={Ads} />
                     </div>
                 {/* </div> */}
