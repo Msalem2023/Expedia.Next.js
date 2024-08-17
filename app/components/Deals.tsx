@@ -16,12 +16,12 @@ const Deals = () => {
                     <div>
                         <button className="bg-white text-sky-600 text-xl font-semibold p-4 rounded-full hidden lg:block" >See all deals</button>
                     </div>
-                    {/* <div className="  "> */}
-                        <div className="flex h-full bg-[rgba(1,82,66,0.8)]">
-                            <Slider Image={Ads} />
-                        </div>
-                    {/* </div> */}
                 </div>
+                {/* <div className="  "> */}
+                    <div className="flex h-full bg-[rgba(1,82,66,0.8)]">
+                        <Slider Image={Ads} />
+                    </div>
+                {/* </div> */}
             </div>
         </div>
 
