@@ -48,76 +48,103 @@ const Property = () => {
 
     return (
         <>
-            {items.map(e => (
-                <div key={e.id} className="relative mb-5 p-3 border border-neutral-500 rounded-lg grid grid-cols-1 lg:grid-cols-4 gap-4">
-                    <div className="hidden lg:block lg:col-span-1 lg:h-full">
-                        <Single image={e.Img} />
-                    </div>
-                    <div className="lg:hidden col-span-2">
-                        <Image className="w-full h-60 rounded-lg" src={e.Img[0]} alt="property" />
-                    </div>
-
-                    <Link href={`/property/${e.id}`} className="col-span-2 lg:col-span-3 flex flex-col">
-                        <div className="flex flex-col lg:flex-row lg:justify-between">
-                            <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
-                                <h3 className="text-2xl text-neutral-700 font-semibold">{e.Name}</h3>
-                                <div className="flex flex-row gap-2 mt-2">
-                                    {Array.from({ length: e.Stars }, (_, index) => (
-                                        <BiStar key={index} size={24} color="gray" />
-                                    ))}
+            {/* Property Cards */}
+            <div className="container mx-auto px-4">
+                {items.map(e => (
+                    <div key={e.id} className="mb-10 p-6 border border-neutral-300 rounded-lg shadow-lg flex flex-col lg:flex-row lg:items-start bg-white">
+                        {/* Image Section */}
+                        <div className="w-full lg:w-1/3 lg:pr-4">
+                            <div className="relative">
+                                <div className="hidden lg:block">
+                                    <Single image={e.Img} />
                                 </div>
-                                <p className="text-md font-semibold mt-2">{e.City}</p>
-                                {e.HasPool && <FaSwimmer size={24} color="gray" />}
-                                <div className="hidden lg:block lg:mt-4">
-                                    <p className={`${e.Policy === "Refundable" ? "text-green-500" : "text-rose-500"}`}>
-                                        {e.Policy}
-                                    </p>
-                                    <p className="text-green-500 text-md font-semibold">
-                                        {e.Payment === "pay later" ? "Reserve now, pay later" : "Pay now"}
-                                    </p>
+                                <div className="lg:hidden">
+                                    <Image className="w-full h-60 rounded-lg object-cover" src={e.Img[0]} alt="property" />
                                 </div>
                             </div>
                         </div>
-                    </Link>
 
-                    <div className="hidden lg:block lg:col-span-1 lg:relative">
-                        <div className="absolute bottom-0 right-0 p-3">
-                            <div className={`${e.AvailableRooms < 5 ? "bg-rose-500" : "bg-green-700"} rounded-lg w-30 h-10 text-center text-lg font-semibold p-2`}>
+                        {/* Content Section */}
+                        <Link href={`/property/${e.id}`} className="w-full lg:w-2/3 flex flex-col">
+                            <div className="flex flex-col lg:flex-row lg:justify-between lg:mb-6">
+                                <div className="w-full lg:w-2/3">
+                                    <h3 className="text-3xl text-neutral-800 font-bold mb-2">{e.Name}</h3>
+                                    <div className="flex flex-row gap-2 mb-2">
+                                        {Array.from({ length: e.Stars }, (_, index) => (
+                                            <BiStar key={index} size={24} color="gray" />
+                                        ))}
+                                    </div>
+                                    <p className="text-md font-medium text-neutral-600">{e.City}</p>
+                                    {e.HasPool && <FaSwimmer size={24} color="gray" className="mt-2" />}
+                                    <div className="hidden lg:block mt-4">
+                                        <p className={`text-md ${e.Policy === "Refundable" ? "text-green-500" : "text-red-500"}`}>
+                                            {e.Policy}
+                                        </p>
+                                        <p className="text-green-500 text-md font-medium">
+                                            {e.Payment === "pay later" ? "Reserve now, pay later" : "Pay now"}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Review Section for Large Screens */}
+                                <div className="hidden lg:flex lg:items-center lg:space-x-4 lg:mt-4">
+                                    <div className={`bg-${e.Review ? "green-700" : "gray-300"} rounded-lg w-24 h-10 text-center text-white font-semibold p-2`}>
+                                        {e.Review || "No Review"}
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold text-lg">Wonderful</p>
+                                        <p>{e.NumberOfReviews} reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Price and Availability Section */}
+                        <div className="lg:w-1/3 lg:ml-4 lg:mt-4 lg:flex lg:flex-col lg:items-end lg:justify-between">
+                            <div className={`bg-${e.AvailableRooms < 5 ? "rose-500" : "green-700"} rounded-lg w-full h-12 text-center text-white font-semibold p-2 mb-4`}>
                                 We have {e.AvailableRooms} left
                             </div>
-                            <h3 className="font-bold text-xl text-center mt-2">EGP {e.Price}</h3>
-                            <p className="text-center mt-1">
-                                {e.Taxes !== "included taxes and fees"
-                                    ? `EGP ${e.Price * 0.1 + e.Price} Total`
-                                    : e.Taxes}
-                            </p>
-                            {e.Taxes !== "included taxes and fees" && (
-                                <p className="text-center">
-                                    EGP {e.Price * 0.1} Taxes and fees
+                            <div className="text-right">
+                                <h3 className="font-bold text-2xl mb-1">EGP {e.Price}</h3>
+                                <p className="text-md mb-1">
+                                    {e.Taxes !== "included taxes and fees"
+                                        ? `EGP ${e.Price * 0.1 + e.Price} Total`
+                                        : e.Taxes}
                                 </p>
-                            )}
+                                {e.Taxes !== "included taxes and fees" && (
+                                    <p className="text-md">
+                                        EGP {e.Price * 0.1} Taxes and fees
+                                    </p>
+                                )}
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
 
-            <div className="fixed bottom-0 left-0 w-full bg-white border-t border-neutral-500 p-3 lg:hidden">
-                <div className={`bg-green-700 rounded-lg w-full h-10 text-center text-lg font-semibold p-2 ${items[0]?.AvailableRooms < 5 ? 'bg-rose-500' : ''}`}>
-                    We have {items[0]?.AvailableRooms} left
-                </div>
-                <h3 className="font-bold text-xl text-center mt-2">EGP {items[0]?.Price}</h3>
-                <p className="text-center mt-1">
-                    {items[0]?.Taxes !== "included taxes and fees"
-                        ? `EGP ${items[0]?.Price * 0.1 + items[0]?.Price} Total`
-                        : items[0]?.Taxes}
-                </p>
-                {items[0]?.Taxes !== "included taxes and fees" && (
-                    <p className="text-center">
-                        EGP {items[0]?.Price * 0.1} Taxes and fees
-                    </p>
+            {/* Price Section for Small Screens */}
+            <div className="fixed bottom-0 left-0 w-full bg-white border-t border-neutral-300 p-3 lg:hidden">
+                {items.length > 0 && (
+                    <>
+                        <div className={`bg-${items[0].AvailableRooms < 5 ? "rose-500" : "green-700"} rounded-lg w-full h-10 text-center text-lg font-semibold p-2`}>
+                            We have {items[0].AvailableRooms} left
+                        </div>
+                        <h3 className="font-bold text-xl text-center mt-2">EGP {items[0].Price}</h3>
+                        <p className="text-center mt-1">
+                            {items[0].Taxes !== "included taxes and fees"
+                                ? `EGP ${items[0].Price * 0.1 + items[0].Price} Total`
+                                : items[0].Taxes}
+                        </p>
+                        {items[0].Taxes !== "included taxes and fees" && (
+                            <p className="text-center">
+                                EGP {items[0].Price * 0.1} Taxes and fees
+                            </p>
+                        )}
+                    </>
                 )}
             </div>
 
+            {/* Pagination Controls */}
             <div className="flex justify-between mt-4">
                 <button onClick={Previous} disabled={current === 1}>
                     <BiArrowToLeft size={50} className="bg-white rounded-full p-2 hover:bg-neutral-500 border border-sky-500 text-sky-500" />
