@@ -11,7 +11,7 @@ const Trip=()=>{
     console.log(state)
     return(
         <div>
-            <div className="flex justify-center gap-3 mt-10">
+            <div className="flex justify-center gap-3 mt-5">
                 
                 {trip.map((e:any)=>(
                     <ul key={e} className="border-b-[2px]">
