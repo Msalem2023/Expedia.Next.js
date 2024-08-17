@@ -68,8 +68,8 @@ const Selected: React.FC<{ params: Params }> = ({ params }) => {
                     <a href="#overview" className="cursor-pointer font-semibold text-xl focus:text-sky-600 focus:border-b-[3px] focus:border-b-sky-600 " >Overview</a>
                     <a href="#amenities" className="cursor-pointer font-semibold text-xl focus:text-sky-600 focus:border-b-[3px] focus:border-b-sky-600">Amenities</a>
                     <a href="#rooms" className="cursor-pointer font-semibold text-xl focus:text-sky-600 focus:border-b-[3px] focus:border-b-sky-600">Rooms</a>
-                    <a href="#accessibility" className="cursor-pointer font-semibold text-xl focus:text-sky-600 focus:border-b-[3px] focus:border-b-sky-600">Accessability</a>
-                    <a href="#policies" className="cursor-pointer font-semibold text-xl focus:text-sky-600 focus:border-b-[3px] focus:border-b-sky-600">Polcies</a>
+                    <a href="#Reviews" className="cursor-pointer font-semibold text-xl focus:text-sky-600 focus:border-b-[3px] focus:border-b-sky-600">Accessability</a>
+                    <a href="#You may like" className="cursor-pointer font-semibold text-xl focus:text-sky-600 focus:border-b-[3px] focus:border-b-sky-600">Polcies</a>
                 </div>
             </div>
             <div className="lg:col-span-1 " />
@@ -120,11 +120,11 @@ const Selected: React.FC<{ params: Params }> = ({ params }) => {
                     ))}
                 </div>
             </div>
-            <div className="col-start-1 col-end-7 lg:col-span-4">
+            <div id="You may like" className="col-start-1 col-end-7 lg:col-span-4">
                 <Swipper image={data[0].Img} />
             </div>
             <div className="col-start-1 col-end-7 lg:col-span-4">
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div id="Reviews" className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
                     {data[0].Reviews?.slice(0, 3).map((review, index) => (
                         <Review key={index} review={review} />

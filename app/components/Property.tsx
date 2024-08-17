@@ -54,7 +54,7 @@ const Property = () => {
                         <Single image={e.Img} />
                     </div>
                     <div className="col-span-2 lg:hidden">
-                        <Image width={50} height={50} fill src={e.Img[0]} alt="property"/>
+                        <Image className="w-full h-full rounded-lg" src={e.Img[0]} alt="property"/>
                     </div>
                     <Link href={`/property/${e.id}`} className="col-span-2">
                         <div className="grid grid-cols-3 gap-4">
