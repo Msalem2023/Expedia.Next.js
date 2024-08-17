@@ -58,7 +58,7 @@ const Property = () => {
                     </div>
                     <Link href={`/property/${e.id}`} className="col-span-2">
                         <div className="flex flex-wrap-reverse">
-                            <div className="w-1/2">
+                            <div className="w-full lg:w-1/2">
                                 <h3 className="text-2xl text-neutral-700 font-semibold">{e.Name}</h3>
                                 <div className="flex flex-row gap-2">
                                     {Array.from({ length: e.Stars }, (_, index) => (
@@ -75,7 +75,7 @@ const Property = () => {
                                         {e.Payment === "pay later" ? "Reserve now, pay later" : "Pay now"}
                                     </p>
                                 </div>
-                                <div className="hidden lg:w-1/2">
+                                <div className="hidden lg:block lg:w-1/2">
                                     <div className="bg-green-700 rounded-lg w-24 h-10 text-center p-2">
                                         {e.Review}
                                     </div>
