@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex flex-row justify-between shadow">
             <div className=" flex flex-row gap-6 items-center p-6">
                 <div>
-                    <Image className="w-full h-full rounded-lg" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&siteid=4406&2&6f9ec7db" alt="Home Page" />
+                    <p className="text-3xl text-sky-600 font-bold w-60 h-48">Expedia</p>
                 </div>
                 <div className="hidden lg:block">
                     <Menu />

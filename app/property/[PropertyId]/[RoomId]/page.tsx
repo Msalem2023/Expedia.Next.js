@@ -75,7 +75,7 @@ const Room: React.FC<{ params: Params }> = ({ params }) => {
         try {
             await new Promise((resolve) => setTimeout(resolve, 5000));
             console.log('Payment details:', formData);
-            toast.success("Awesome, payment has been processed successfully!");
+            toast.success("Awesome!");
         } catch (error) {
             console.error(error);
         } finally {

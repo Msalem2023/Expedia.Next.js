@@ -42,13 +42,12 @@ const Property = () => {
         }
     };
 
-    const change = (number:number) => {
+    const change = (number: number) => {
         setCurrent(number);
     };
 
     return (
         <>
-            {/* Property Cards */}
             <div className="container mx-auto px-4">
                 {items.map(e => (
                     <div key={e.id} className="mb-10 p-6 border border-neutral-300 rounded-lg shadow-lg flex flex-col lg:flex-row lg:items-start bg-white">
@@ -84,22 +83,20 @@ const Property = () => {
                                             {e.Payment === "pay later" ? "Reserve now, pay later" : "Pay now"}
                                         </p>
                                     </div>
+                                    <div className="hidden lg:flex lg:items-center lg:space-x-4 lg:mt-4">
+                                        <div className={`bg-${e.Review ? "green-700" : "gray-300"} rounded-lg w-24 h-10 text-center text-white font-semibold p-2`}>
+                                            {e.Review || "No Review"}
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-lg">Wonderful</p>
+                                            <p>{e.NumberOfReviews} reviews</p>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                {/* Review Section for Large Screens */}
-                                <div className="hidden lg:flex lg:items-center lg:space-x-4 lg:mt-4">
-                                    <div className={`bg-${e.Review ? "green-700" : "gray-300"} rounded-lg w-24 h-10 text-center text-white font-semibold p-2`}>
-                                        {e.Review || "No Review"}
-                                    </div>
-                                    <div>
-                                        <p className="font-semibold text-lg">Wonderful</p>
-                                        <p>{e.NumberOfReviews} reviews</p>
-                                    </div>
-                                </div>
                             </div>
                         </Link>
 
-                        {/* Price and Availability Section */}
                         <div className="lg:w-1/3 lg:ml-4 lg:mt-4 lg:flex lg:flex-col lg:items-end lg:justify-between">
                             <div className={`bg-${e.AvailableRooms < 5 ? "rose-500" : "green-700"} rounded-lg w-full h-12 text-center text-white font-semibold p-2 mb-4`}>
                                 We have {e.AvailableRooms} left
@@ -122,7 +119,6 @@ const Property = () => {
                 ))}
             </div>
 
-            {/* Price Section for Small Screens */}
             <div className="fixed bottom-0 left-0 w-full bg-white border-t border-neutral-300 p-3 lg:hidden">
                 {items.length > 0 && (
                     <>
@@ -144,7 +140,6 @@ const Property = () => {
                 )}
             </div>
 
-            {/* Pagination Controls */}
             <div className="flex justify-between mt-4">
                 <button onClick={Previous} disabled={current === 1}>
                     <BiArrowToLeft size={50} className="bg-white rounded-full p-2 hover:bg-neutral-500 border border-sky-500 text-sky-500" />
