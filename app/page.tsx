@@ -10,7 +10,6 @@ export default function Home() {
 
   return (
     <div className="">
-          <Navbar />
         <div className="m-10">
           <Trip />
         </div>

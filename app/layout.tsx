@@ -10,6 +10,7 @@ import ToasterProvider from "./providers/Providers";
 import Footer from "./components/footer";
 import RentModal from "./Modal/ListYourProperty";
 import DestinationModal from "./Modal/DestinationModal";
+import Navbar from "./components/Navbar";
 
 
 export default function RootLayout({
@@ -17,7 +18,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
+
   return (
     <html lang="en">
       <body >
@@ -25,16 +26,16 @@ export default function RootLayout({
         <DataProvider>
           <FilterProvider>
             <AppProvider>
-              <ToasterProvider/>
-              <RentModal/>
-              <OptionModal/>
-              <DestinationModal/>
-              <DateModal/>
-
+              <ToasterProvider />
+              <RentModal />
+              <OptionModal />
+              <DestinationModal />
+              <DateModal />
+              <Navbar />
               <div className="py-20">
-              {children}
+                {children}
               </div>
-              <Footer/>
+              <Footer />
             </AppProvider>
           </FilterProvider>
         </DataProvider>
