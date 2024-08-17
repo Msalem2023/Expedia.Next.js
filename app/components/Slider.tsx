@@ -43,7 +43,7 @@ const Slider: React.FC<SingleProps> = ({ Image }) => {
     console.log(Image.map((e) => (e)))
 
     return (
-        <div className='relative w-full  overflow-hidden'>
+        <div className='relative w-full h-full  overflow-hidden'>
             <div className='flex items-center'>
                 {currentIndex > 1 && (
                     <MdArrowBackIosNew
@@ -60,7 +60,7 @@ const Slider: React.FC<SingleProps> = ({ Image }) => {
                         style={{ transform: `translateX(-${(currentIndex / Image.length) * 100}%)` }}
                     >
                         {Image.map((e,index) => (
-                            <div key={index} className='flex-shrink-0 w-1/4 p-2'>
+                            <div key={index} className='flex-shrink-0 w-1/6 p-2'>
                                 <Single rate={e.rate} taxes={e.taxes} Stay={e.Stay} discount={e.discount}  PricePernight={e.PricePernight} City={e.City} Name={e.Name} image={e.Img} />
                             </div>
                         ))}
