@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex flex-row justify-between shadow">
             <div className=" flex flex-row gap-6 items-center p-6">
                 <div>
-                    <p className="text-3xl text-sky-600 font-bold w-60 h-48">Expedia</p>
+                    <p className="text-3xl text-sky-600 font-bold">Expedia</p>
                 </div>
                 <div className="hidden lg:block">
                     <Menu />
