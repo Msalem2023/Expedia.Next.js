@@ -4,7 +4,7 @@ import Slider from "./Slider"
 
 const Deals = () => {
     return (
-        <div className=" relative h-[793px] lg:h-[810px]">
+        <div className=" relative h-[785px] lg:h-[800px]">
             <Image className="w-full h-full rounded-xl object-cover opacity-100 "
                 src="https://forever.travel-assets.com/flex/flexmanager/mediaasset/714087-0_2-BEX_GO_Alps_Therin-00539RGB.jpg?impolicy=fcrop&w=1200&h=514&p=1&q=high"
                 alt="Scenic view" />

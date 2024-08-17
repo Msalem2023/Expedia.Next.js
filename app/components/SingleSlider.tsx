@@ -66,7 +66,7 @@ const Single: React.FC<SingleProps> = ({
                     )}
 
                     <BiHeart className='absolute top-0 right-3 text-rose-500 bg-white rounded-full p-2' size={50} />
-                    <div className='w-full h-full'>
+                    <div className='w-full sm:w-4/6 h-full'>
                         <Image 
                             className='w-full h-full object-cover rounded-3xl'
                             src={image[currentIndex]}
