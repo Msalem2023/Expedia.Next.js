@@ -55,7 +55,7 @@ const Single: React.FC<SingleProps> = ({
         <div>
 
             <div className='relative w-full  lg:h-[300px] md:h-[340px]  h-[323px] max-w-screen-lg mx-auto overflow-hidden'>
-                <div className='relative flex items-center w-full h-full'>
+                <div className='relative flex items-center sm:w-3/6 lg:w-full h-full'>
                     {image?.length > 1 && (
                         <MdArrowBackIosNew
                             onClick={handleLeft}
@@ -68,7 +68,7 @@ const Single: React.FC<SingleProps> = ({
                     <BiHeart className='absolute top-0 right-3 text-rose-500 bg-white rounded-full p-2' size={50} />
                     <div className='w-full h-full'>
                         <Image 
-                            className='sm:w-60 lg:w-full h-full object-cover rounded-3xl'
+                            className='w-full h-full object-cover rounded-3xl'
                             src={image[currentIndex]}
                             alt='Explore'
                         />
