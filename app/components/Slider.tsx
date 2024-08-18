@@ -60,7 +60,7 @@ const Slider: React.FC<SingleProps> = ({ Image }) => {
                         style={{ transform: `translateX(-${(currentIndex / Image.length) * 100}%)` }}
                     >
                         {Image.map((e,index) => (
-                            <div key={index} className='flex-shrink-0 lg-w-1/4 md:w-1/3 sm:w-full p-2'>
+                            <div key={index} className='flex-shrink-0 lg:w-1/4 md:w-1/3 sm:w-[64] p-2'>
                                 <Single rate={e.rate} taxes={e.taxes} Stay={e.Stay} discount={e.discount}  PricePernight={e.PricePernight} City={e.City} Name={e.Name} image={e.Img} />
                             </div>
                         ))}
